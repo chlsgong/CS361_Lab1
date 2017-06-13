@@ -5,14 +5,15 @@ public class CovertChannel {
 	static FileOutputStream outStream;
 	static BufferedWriter writer;
 	
-	String create = "create lyle obj";
-	String destroy = "destroy lyle obj";
-	String read = "read lyle obj";
-	String write = "write lyle obj 1";
-	String run = "run lyle";
+	String createH = "create hal obj\n";
+	String createL = "create lyle obj\n";
+	String destroy = "destroy lyle obj\n";
+	String read = "read lyle obj\n";
+	String write = "write lyle obj 1\n";
+	String run = "run lyle\n";
 	
-	Instruction createHInstruction = new Instruction("obj", "hal", create, InstructionType.CREATE);
-	Instruction createLInstruction = new Instruction("obj", "lyle", create, InstructionType.CREATE);
+	Instruction createHInstruction = new Instruction("obj", "hal", createH, InstructionType.CREATE);
+	Instruction createLInstruction = new Instruction("obj", "lyle", createL, InstructionType.CREATE);
 	Instruction writeInstruction = new Instruction("obj", "lyle", write, 1);
 	Instruction readInstruction = new Instruction("obj", "lyle", read, InstructionType.READ);
 	Instruction destroyInstruction = new Instruction("obj", "lyle", destroy, InstructionType.DESTROY);
